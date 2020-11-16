@@ -187,7 +187,7 @@ public class BaseClass {
 	public String getPropertyValue(String name) {
 		log.info("Inside getPropertyValue() method =============== ");
 		String value = prop.getProperty(name);
-		System.out.println(value);
+	//	System.out.println(value);
 		if (value != null) {
 			return value;
 		} else {

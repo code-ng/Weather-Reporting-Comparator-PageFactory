@@ -33,16 +33,20 @@ public class HomePageTest extends BaseClass {
 
 		initiliaze();
 		homePage= new HomePage(driver);
+		// Click on pop up on diplaying
 		homePage.checkPopupWindow();
+		//Click on ... on main page
 		homePage.clickEnhancedTab();
+		
+		// Validate whether 'Weather ' icon display or not
 		boolean weatherDisplay = homePage.isWeatherDisplay();
-		//System.out.println(weatherDisplay);
 		if(weatherDisplay) {
+			//Click on Weather test
 			homePage.clickWeatherLink();
 		}
-		//takeScreesnShot();
 		String expectedWeatherPageTitle = getWeatherPageTitle();
 		String actualWeatherPageTitle = homePage.getPageTitle();
+		//Post click validate the weather page title
 		Assert.assertEquals(actualWeatherPageTitle, expectedWeatherPageTitle);
 		
 	}
