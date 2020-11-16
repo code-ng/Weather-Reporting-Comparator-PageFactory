@@ -18,20 +18,20 @@ public class MyListener implements ITestListener {
 
 	public void onTestStart(ITestResult result) {
 
-		System.out.println("on test start");
+	//	System.out.println("on test start");
 
 	}
 
 	public void onTestSuccess(ITestResult result) {
 
-		System.out.println("on test success");
+	//	System.out.println("on test success");
 
 		log.info(result.getMethod().getMethodName() + "Test is Passed");
 	}
 
 	public void onTestFailure(ITestResult result) {
 
-		System.out.println("on test failure");
+	//	System.out.println("on test failure");
 		log.info(result.getMethod().getMethodName() + "Test is Failed");
 		try {
 			base.takeScreesnShot();
@@ -44,26 +44,26 @@ public class MyListener implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 
-		System.out.println("on test skipped");
+	//	System.out.println("on test skipped");
 		log.info(result.getMethod().getMethodName() + "Test is Skipped");
 
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 
-		System.out.println("on test sucess within percentage");
+	//	System.out.println("on test sucess within percentage");
 
 	}
 
 	public void onStart(ITestContext context) {
 
-		System.out.println("on start");
+	//	System.out.println("on start");
 
 	}
 
 	public void onFinish(ITestContext context) {
 
-		System.out.println("on finish");
+	//	System.out.println("on finish");
 
 		// driver.close();
 

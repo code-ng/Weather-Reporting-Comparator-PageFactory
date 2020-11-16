@@ -25,14 +25,17 @@ public class WeatherHomePageTest extends BaseClass {
 		
 		weatherPage = new WeatherHomePage(driver);
 		try {
-
+		// check city is already selected or not
 		boolean isCitySelect =	weatherPage.isCitySelected("cityName");
 		log.info(isCitySelect);
+		
 		if(!isCitySelect) {
+			//if not select select the checkbox
 			weatherPage.selectCheckbox("cityName");
 		}
+		//Get the city temperatur
 		weatherPage.getTemperature("cityName");
-		
+		//Click on the cityname and take snapshot
 		weatherPage.clickBangaloreTemperature();
 		} 
 		catch (Exception e) {
